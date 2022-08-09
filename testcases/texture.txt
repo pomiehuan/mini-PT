@@ -1,0 +1,192 @@
+PerspectiveCamera {
+    center 50 52 295.6
+    direction 0 -0.042612 -1
+    up 0 1 0
+    angle 35
+    width 1024
+    height 768
+}
+
+Lights {
+    numLights 1
+    PointLight {
+      position 50 81.33 81.6
+      color 1 1 1
+    }
+}
+
+Background {
+    color 0 0 0
+}
+
+Materials {
+    numMaterials 13
+    PhongMaterial { 
+      type DIFF
+      color 0.75 0.5 0.5
+      reflection 0 0 0
+      refRate 1
+	}
+	PhongMaterial { 
+      type DIFF
+      color 0.9 0.9 0.9
+      reflection 0 0 0
+      refRate 1
+	}
+    PhongMaterial { 
+      type DIFF
+      color 0.5 0.5 0.75
+      reflection 0 0 0
+      refRate 1
+	}
+    PhongMaterial { 
+      type DIFF
+      color 0.75 0.75 0.75
+      reflection 0 0 0
+      refRate 1
+	}
+    PhongMaterial {
+      type DIFF
+      color 0.99 0.99 0.99
+      reflection 0 0 0
+      refRate 1
+      texture_file textures/tex_world_map.bmp
+    }
+    PhongMaterial {
+      type REFR
+      color 0.87 0.999 0.87
+      reflection 0 0 0
+      refRate 1.5
+    }
+    PhongMaterial {
+        type DIFF
+        color 0 0 0
+        reflection 40 40 40
+        refRate 1
+    }
+    PhongMaterial {
+      type REFR
+      color 0.8 0.4 0.9
+      reflection 0 0 0
+      refRate 1.5
+    }
+    PhongMaterial {
+      type SPEC
+      color 0.95 0.75 0.3
+      reflection 0 0 0
+      refRate 1
+    }
+    PhongMaterial {
+      type DIFF
+      color 0.99 0.99 0.99
+      reflection 0 0 0
+      refRate 1
+      texture_file textures/sibenik/mramor6x6.bmp
+    }
+    PhongMaterial {
+      type DIFF
+      color 0.99 0.99 0.99
+      reflection 0 0 0
+      refRate 1
+      texture_file textures/sibenik/kamen.bmp
+    }
+    PhongMaterial {
+      type DIFF
+      color 0.99 0.99 0.99
+      reflection 0 0 0
+      refRate 1
+      texture_file textures/wood.bmp
+    }
+
+    PhongMaterial {
+      type DIFF
+      color 0.99 0.99 0.99
+      reflection 0 0 0
+      refRate 1
+      texture_file textures/tex_stone.bmp
+    }
+
+
+}
+
+Group {
+    numObjects 13
+    
+    MaterialIndex 2
+    Plane {
+        normal 1 0 0
+        offset 1
+    }
+
+    MaterialIndex 11
+    Rectangle {
+        point 1 0 0
+        x 98 0 0
+        y 0 81.6 0
+    }
+
+    MaterialIndex 10
+    Rectangle {
+        point 1 0 0
+        x 120 0 0
+        y 0 0 150
+    }
+   
+
+    MaterialIndex 11
+    Rectangle {
+        point 99 0 300
+        x -98 0 0
+        y 0 81.6 0
+    }
+
+    MaterialIndex 0
+    Plane {
+        normal 0 1 0
+        offset 81.6
+    }
+    Plane {
+        normal 0 1 0
+        offset -1
+    }
+
+    MaterialIndex 1
+    Plane {
+        normal 1 0 0
+        offset 99
+    }
+
+    MaterialIndex 4
+    Sphere {
+        center 80 20 50
+        radius 20
+    }
+
+    MaterialIndex 6
+    Sphere {
+        center 50 110 50
+        radius 30
+    }
+
+    Sphere {
+        center 50 110 150
+        radius 30
+    }
+
+    Sphere {
+        center 50 110 250
+        radius 30
+    }
+
+    MaterialIndex 7
+    Sphere {
+        center 10 20 80
+        radius 10
+    }
+    
+    MaterialIndex 12
+    Sphere {
+        center 45 30 150
+        radius 10
+    }
+}
